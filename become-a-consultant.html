@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply to Join the SaaSMatchup Consultant Network</title>
+<meta name="description" content="We're selective. We review every application personally. We don't list everyone who applies — we list consultants who have genuine depth in a specific area and can back it up.">
+<meta property="og:title" content="Apply to Join the SaaSMatchup Consultant Network">
+<meta property="og:description" content="Apply to join a vetted network of MarTech, data, and AI consultants. We review every application personally.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://saasmatchup.com/become-a-consultant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --background:#FAF7F2;--paper:#FFFDF9;--accent:#D97706;--accent-light:#FDE68A;--accent-pale:#FFFBEB;
+  --text-primary:#1C1917;--text-secondary:#44403C;--text-muted:#78716C;--text-faint:#A8A29E;
+  --border:rgba(28,25,23,0.12);--border-amber:rgba(217,119,6,0.3);--rust:#C2410C;
+  --sage:#4D7C5F;--sage-pale:#F0FDF4;--sage-border:rgba(77,124,95,0.2);
+  --font-headline:'Lora',serif;--font-ui:'Caveat',cursive;--font-body:'DM Sans',sans-serif;
+  --max-w:1080px;--radius:10px;
+}
+body{font-family:var(--font-body);background:var(--background);color:var(--text-primary);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,247,242,0.92);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--border);height:60px;display:flex;align-items:center;padding:0 32px;gap:32px}
+.nav-logo{display:flex;align-items:center;gap:6px;font-family:var(--font-ui);font-size:20px;font-weight:700;color:var(--text-primary);text-decoration:none}
+.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:8px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:6px 12px;border-radius:6px;transition:all 0.15s}
+.nav-links a:hover{color:var(--text-primary);background:rgba(217,119,6,0.08)}
+.nav-links a.active{color:var(--accent)}
+.nav-cta{margin-left:auto;font-family:var(--font-ui);font-size:16px;font-weight:600;color:var(--paper);background:var(--accent);padding:7px 18px;border-radius:8px;text-decoration:none;box-shadow:3px 3px 0 rgba(28,25,23,0.2);transition:all 0.15s;white-space:nowrap}
+.nav-cta:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(28,25,23,0.2)}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:var(--max-w);margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:6px;font-family:var(--font-ui);font-size:15px;color:var(--text-faint)}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;transition:color 0.15s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{color:var(--accent);font-size:13px}
+
+/* HERO */
+.hero{background:var(--paper);border-bottom:1.5px solid var(--border);padding:64px 32px 56px}
+.hero-inner{max-width:var(--max-w);margin:0 auto;max-width:680px}
+.hero-eyebrow{font-family:var(--font-ui);font-size:16px;font-weight:600;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::after{content:'';height:1.5px;background:var(--accent-light);width:48px}
+.hero h1{font-family:var(--font-headline);font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:16px}
+.hero-sub{font-size:17px;color:var(--text-muted);line-height:1.75}
+
+/* CONTENT */
+.content{max-width:var(--max-w);margin:0 auto;padding:0 32px 96px}
+
+/* SECTION HEADERS */
+.section-eyebrow{font-family:var(--font-ui);font-size:16px;font-weight:700;color:var(--accent);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.section-eyebrow::after{content:'';height:1.5px;background:var(--accent-light);width:40px}
+.section-heading{font-family:var(--font-headline);font-size:26px;font-weight:600;color:var(--text-primary);margin-bottom:8px;letter-spacing:-0.01em}
+
+/* WHO WE'RE LOOKING FOR */
+.criteria-section{padding-top:64px}
+.criteria-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.criteria-card{background:var(--paper);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px 22px}
+.criteria-card h3{font-family:var(--font-headline);font-size:16px;font-weight:600;color:var(--text-primary);margin-bottom:8px}
+.criteria-card p{font-size:13px;color:var(--text-muted);line-height:1.65}
+
+/* SPECIALIZATIONS */
+.specs-section{padding-top:56px}
+.specs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.spec-card{background:var(--paper);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.spec-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.spec-card-text{font-size:14px;color:var(--text-secondary);font-weight:500}
+.specs-note{margin-top:16px;font-size:13px;color:var(--text-faint);font-family:var(--font-ui)}
+
+/* FORM */
+.form-section{padding-top:64px}
+.form-section-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+.form-intro h2{font-family:var(--font-headline);font-size:24px;font-weight:600;color:var(--text-primary);margin-bottom:10px;letter-spacing:-0.01em}
+.form-intro p{font-size:15px;color:var(--text-muted);line-height:1.75;margin-bottom:20px}
+.form-perks{display:flex;flex-direction:column;gap:12px;margin-top:24px;padding:20px 22px;background:var(--accent-pale);border:1px solid var(--border-amber);border-radius:var(--radius)}
+.form-perks-heading{font-family:var(--font-ui);font-size:15px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.perk-row{display:flex;align-items:flex-start;gap:8px}
+.perk-icon{font-size:14px;flex-shrink:0;margin-top:2px}
+.perk-text{font-size:13px;color:var(--text-secondary);line-height:1.55}
+
+.form-box{background:var(--paper);border:1.5px solid var(--border);border-radius:var(--radius);padding:32px}
+.form-box .form-sub{font-size:14px;color:var(--text-faint);margin-bottom:24px;line-height:1.6}
+.field-group{margin-bottom:18px}
+.field-label{font-family:var(--font-ui);font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;display:block}
+.field-required{color:var(--accent);margin-left:2px}
+.field-input,.field-select,.field-textarea{width:100%;background:var(--background);border:1.5px solid var(--border);border-radius:8px;color:var(--text-primary);padding:10px 14px;font-family:var(--font-body);font-size:14px;outline:none;transition:border-color 0.2s;appearance:none}
+.field-input:focus,.field-select:focus,.field-textarea:focus{border-color:var(--accent)}
+.field-input::placeholder,.field-textarea::placeholder{color:var(--text-faint)}
+.field-textarea{resize:vertical;min-height:80px;line-height:1.6}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.submit-btn{width:100%;font-family:var(--font-ui);font-size:18px;font-weight:700;color:var(--paper);background:var(--accent);border:none;padding:14px 24px;border-radius:8px;cursor:pointer;box-shadow:4px 4px 0 rgba(28,25,23,0.18);transition:all 0.15s;margin-top:6px}
+.submit-btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(28,25,23,0.18)}
+.submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:4px 4px 0 rgba(28,25,23,0.18)}
+
+.success-box{background:var(--sage-pale);border:1.5px solid var(--sage-border);border-radius:var(--radius);padding:28px 32px;text-align:center;display:none}
+.success-box.visible{display:block}
+.success-icon{font-size:36px;margin-bottom:12px}
+.success-box h3{font-family:var(--font-headline);font-size:20px;font-weight:600;color:var(--text-primary);margin-bottom:8px}
+.success-box p{font-size:14px;color:var(--text-muted);line-height:1.65}
+
+/* FOOTER */
+footer{border-top:1.5px solid var(--border);padding:32px;text-align:center;font-size:13px;color:var(--text-faint)}
+footer a{color:var(--text-muted);text-decoration:none}
+footer a:hover{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .criteria-grid{grid-template-columns:1fr}
+  .specs-grid{grid-template-columns:1fr}
+  .form-section-inner{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav{padding:0 16px;gap:16px}.nav-links{display:none}
+  .breadcrumb{padding:12px 16px}
+  .hero{padding:40px 16px 36px}
+  .content{padding:0 16px 64px}
+  .field-row{grid-template-columns:1fr}
+  .form-box{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">SaaSMatchup<span class="nav-logo-dot"></span></a>
+  <div class="nav-links">
+    <a href="/directory/">Directory</a>
+    <a href="/#stacks">Stacks</a>
+    <a href="/find-a-consultant.html">Find a Consultant</a>
+  </div>
+  <a href="/#quiz" class="nav-cta">Take the Quiz →</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span class="breadcrumb-sep">→</span>
+  <a href="/find-a-consultant.html">Find a Consultant</a><span class="breadcrumb-sep">→</span>
+  Apply to Join
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Consultant Network</div>
+    <h1>Apply to Join the SaaSMatchup Consultant Network</h1>
+    <p class="hero-sub">We're selective. We review every application personally. We don't list everyone who applies — we list consultants who have genuine depth in a specific area and can back it up.</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- WHO WE'RE LOOKING FOR -->
+  <div class="criteria-section">
+    <div class="section-eyebrow">Who we're looking for</div>
+    <h2 class="section-heading">Three things we look for in every applicant</h2>
+    <div class="criteria-grid">
+      <div class="criteria-card">
+        <h3>Genuine platform depth</h3>
+        <p>You've implemented the tool, not just managed campaigns on top of it. You understand the data layer, the API, the gotchas that only show up in production.</p>
+      </div>
+      <div class="criteria-card">
+        <h3>A defined ICP</h3>
+        <p>You know who you're best for and who you'd refer elsewhere. Generalists need not apply. The consultants we list are specialists who have a clear answer to "who is this not for."</p>
+      </div>
+      <div class="criteria-card">
+        <h3>References you can provide</h3>
+        <p>We ask for references and we follow up on them. Not logos — actual people who can speak to the quality and outcome of your work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPECIALIZATIONS -->
+  <div class="specs-section">
+    <div class="section-eyebrow">Open specializations</div>
+    <h2 class="section-heading">Current areas we're recruiting for</h2>
+    <div class="specs-grid">
+      <div class="spec-card"><span class="spec-dot"></span><span class="spec-card-text">Marketing automation &amp; lifecycle — Klaviyo, Braze, HubSpot, Iterable</span></div>
+      <div class="spec-card"><span class="spec-dot"></span><span class="spec-card-text">CRM strategy &amp; implementation — Salesforce, HubSpot CRM</span></div>
+      <div class="spec-card"><span class="spec-dot"></span><span class="spec-card-text">Marketing data infrastructure — data warehouses, ETL, CDP</span></div>
+      <div class="spec-card"><span class="spec-dot"></span><span class="spec-card-text">Attribution &amp; measurement — MTA, MMM, incrementality testing</span></div>
+      <div class="spec-card"><span class="spec-dot"></span><span class="spec-card-text">AI &amp; marketing analytics — LLM integration, agentic workflows, analytics</span></div>
+    </div>
+    <p class="specs-note">Don't see your specialty? Apply anyway — we're expanding the network as new categories go live in the directory.</p>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-section" id="application">
+    <div class="form-section-inner">
+      <div class="form-intro">
+        <div class="section-eyebrow">Apply</div>
+        <h2>Submit your application</h2>
+        <p>We review applications personally and typically respond within 5–7 business days. We'll reach out either way.</p>
+        <div class="form-perks">
+          <div class="form-perks-heading">What listing gets you</div>
+          <div class="perk-row"><span class="perk-icon">📥</span><span class="perk-text">Inbound leads from CMOs and marketing leaders actively looking for implementation help</span></div>
+          <div class="perk-row"><span class="perk-icon">🏷️</span><span class="perk-text">Free to list at launch — we'll be transparent if that changes</span></div>
+          <div class="perk-row"><span class="perk-icon">🔗</span><span class="perk-text">Featured placement in relevant directory category pages as they go live</span></div>
+        </div>
+      </div>
+
+      <div>
+        <form class="form-box" id="applicationForm">
+          <p class="form-sub">Fields marked <span style="color:var(--accent)">*</span> are required.</p>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="name">Full name <span class="field-required">*</span></label>
+              <input class="field-input" type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="email">Email <span class="field-required">*</span></label>
+              <input class="field-input" type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="linkedin">LinkedIn URL</label>
+              <input class="field-input" type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/yourname">
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="website">Website or portfolio</label>
+              <input class="field-input" type="url" id="website" name="website" placeholder="yoursite.com">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="specialization">Primary specialization <span class="field-required">*</span></label>
+            <select class="field-select" id="specialization" name="specialization" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Marketing automation &amp; lifecycle (Klaviyo, Braze, HubSpot, Iterable)</option>
+              <option>CRM strategy &amp; implementation (Salesforce, HubSpot CRM)</option>
+              <option>Marketing data infrastructure (data warehouses, ETL, CDP)</option>
+              <option>Attribution &amp; measurement (MTA, MMM, incrementality)</option>
+              <option>AI &amp; marketing analytics</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="tools">Tools you work with most <span class="field-required">*</span></label>
+            <input class="field-input" type="text" id="tools" name="tools" placeholder="e.g. Klaviyo, Snowflake, dbt, Braze, Segment…" required>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="icp">Describe your typical client <span class="field-required">*</span></label>
+            <textarea class="field-textarea" id="icp" name="icp" placeholder="Who do you serve best? Company stage, team size, industry, what they're trying to accomplish." required></textarea>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="engagement">Describe your strongest recent engagement <span class="field-required">*</span></label>
+            <textarea class="field-textarea" id="engagement" name="engagement" placeholder="What did you do, what was the outcome? Be specific — this is what we evaluate." required></textarea>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="references">Can you provide 1–2 client references? <span class="field-required">*</span></label>
+            <select class="field-select" id="references" name="references" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Yes</option>
+              <option>Not yet</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="source">How did you hear about SaaSMatchup?</label>
+            <input class="field-input" type="text" id="source" name="source" placeholder="Search, LinkedIn, referral, directory…">
+          </div>
+
+          <input type="hidden" name="_subject" value="New Consultant Application — SaaSMatchup">
+
+          <button type="submit" class="submit-btn" id="submitBtn">Submit Application →</button>
+        </form>
+
+        <div class="success-box" id="successBox">
+          <div class="success-icon">✅</div>
+          <h3>Application received</h3>
+          <p>Thanks for applying. We review applications personally and typically respond within 5–7 business days. We'll reach out either way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 SaaSMatchup · <a href="/">Home</a> · <a href="/directory/">Directory</a> · <a href="/find-a-consultant.html">Find a Consultant</a></span>
+</footer>
+
+<script>
+const form = document.getElementById('applicationForm');
+const successBox = document.getElementById('successBox');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting…';
+
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch('https://formspree.io/f/xjganrzn', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      successBox.classList.add('visible');
+    } else {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application →';
+      alert('Something went wrong. Please try again or email angshuman.rudra@gmail.com directly.');
+    }
+  } catch(err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Application →';
+    alert('Something went wrong. Please try again or email angshuman.rudra@gmail.com directly.');
+  }
+});
+</script>
+</body>
+</html>
