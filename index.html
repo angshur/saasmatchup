@@ -369,16 +369,7 @@ const STACKS = [
 ];
 
 const CONSULTANTS = [
-  {id:1,name:'James Rodriguez',ini:'JR',title:'HubSpot & RevOps Consultant',tools:['HubSpot','Salesforce','Zapier'],verticals:['Agency','SaaS'],loc:'New York, NY',rMin:150,rMax:200,rating:4.9,reviews:28,grad:'linear-gradient(135deg,#2563EB,#06B6D4)'},
-  {id:2,name:'Shruti Kapoor',ini:'SK',title:'Data Stack & Analytics Engineer',tools:['Snowflake','dbt','Fivetran','Looker'],verticals:['Publisher','SaaS'],loc:'Remote',rMin:175,rMax:250,rating:4.8,reviews:41,grad:'linear-gradient(135deg,#10B981,#06B6D4)'},
-  {id:3,name:'Marcus Patterson',ini:'MP',title:'Agency MarTech Specialist',tools:['TapClicks','Klaviyo','Segment'],verticals:['Agency','eCommerce'],loc:'Chicago, IL',rMin:125,rMax:175,rating:4.7,reviews:19,grad:'linear-gradient(135deg,#F59E0B,#EF4444)'},
-  {id:4,name:'Elena Park',ini:'EP',title:'Salesforce Admin & Architect',tools:['Salesforce','HubSpot','Gong'],verticals:['SaaS','Agency'],loc:'San Francisco, CA',rMin:200,rMax:280,rating:5.0,reviews:15,grad:'linear-gradient(135deg,#8B5CF6,#EC4899)'},
-  {id:5,name:'David Chen',ini:'DC',title:'eCommerce Stack Expert',tools:['Klaviyo','Shopify Plus','Triple Whale'],verticals:['eCommerce'],loc:'Los Angeles, CA',rMin:150,rMax:220,rating:4.8,reviews:33,grad:'linear-gradient(135deg,#2563EB,#8B5CF6)'},
-  {id:6,name:'Priya Sharma',ini:'PS',title:'CDP & Audience Analytics Lead',tools:['Segment','Braze','Snowflake'],verticals:['Publisher','eCommerce'],loc:'Remote',rMin:160,rMax:230,rating:4.9,reviews:22,grad:'linear-gradient(135deg,#10B981,#2563EB)'},
-  {id:7,name:'Tom Wilson',ini:'TW',title:'Agency Operations Consultant',tools:['Monday.com','TapClicks','HubSpot'],verticals:['Agency'],loc:'Austin, TX',rMin:120,rMax:160,rating:4.6,reviews:37,grad:'linear-gradient(135deg,#F59E0B,#10B981)'},
-  {id:8,name:'Ana Lima',ini:'AL',title:'Data Engineering Specialist',tools:['dbt','Fivetran','Databricks','Snowflake'],verticals:['Publisher','SaaS'],loc:'Remote',rMin:180,rMax:250,rating:4.8,reviews:18,grad:'linear-gradient(135deg,#EF4444,#F59E0B)'},
-  {id:9,name:'Ryan Foster',ini:'RF',title:'RevOps Strategy Consultant',tools:['Salesforce','HubSpot','Gong','Outreach'],verticals:['SaaS','Agency'],loc:'New York, NY',rMin:200,rMax:300,rating:4.9,reviews:12,grad:'linear-gradient(135deg,#06B6D4,#2563EB)'},
-  {id:10,name:'Mia Torres',ini:'MT',title:'Marketing Automation Specialist',tools:['Klaviyo','ActiveCampaign','HubSpot'],verticals:['Agency','eCommerce'],loc:'Miami, FL',rMin:130,rMax:180,rating:4.7,reviews:24,grad:'linear-gradient(135deg,#EC4899,#8B5CF6)'},
+  {id:1,name:'Clearpath Analytics',ini:'CA',title:'Marketing Data & MarTech Strategy',tools:['Klaviyo','Snowflake','Braze','Segment','Attribution'],verticals:['Agency','SaaS','eCommerce'],loc:'Remote',rMin:150,rMax:300,rating:null,reviews:null,grad:'linear-gradient(135deg,#D97706,#F59E0B)'},
 ];
 
 // ─── QUIZ LOGIC ──────────────────────────────────────────────────────────────
@@ -537,9 +528,9 @@ function ConsultantCard({ c, onJoin }) {
       <div className="consult-name">{c.name}</div>
       <div className="consult-title">{c.title}</div>
       <div className="consult-tools">{c.tools.map(t=><span key={t} className="consult-tool">{t}</span>)}</div>
-      <div className="consult-meta">📍 {c.loc} · <span className="consult-rate">${c.rMin}–${c.rMax}/hr</span></div>
-      <div className="consult-meta" style={{marginTop:2}}>{'★'.repeat(Math.floor(c.rating))} {c.rating} ({c.reviews} reviews)</div>
-      {!open && !sent && <button className="consult-btn" onClick={()=>setOpen(true)}>Request Introduction →</button>}
+      <div className="consult-meta">📍 {c.loc}{c.rMin ? ` · $${c.rMin}–$${c.rMax}/hr` : ''}</div>
+      {c.rating && <div className="consult-meta" style={{marginTop:2}}>{'★'.repeat(Math.floor(c.rating))} {c.rating} ({c.reviews} reviews)</div>}
+      {!open && !sent && <button className="consult-btn" onClick={()=>window.location.href='/find-a-consultant.html#project-brief'}>Request Introduction →</button>}
       {open && !sent && (
         <form className="contact-form" onSubmit={submit}>
           <input className="contact-input" placeholder="Your name" value={name} onChange={e=>setName(e.target.value)} required />
@@ -560,7 +551,7 @@ function Nav({ navigate, route }) {
       <div className="nav-logo" onClick={()=>navigate('/')}>SaaSMatchup<div className="logo-dot"></div></div>
       <div className="nav-links">
         <button className={route.startsWith('/stacks')?'active':''} onClick={()=>navigate('/stacks/marketing-agency')}>Stacks</button>
-        <button className={route==='/consultants'?'active':''} onClick={()=>navigate('/consultants')}>Consultants</button>
+        <button className={route==='/consultants'?'active':''} onClick={()=>window.location.href='/find-a-consultant.html'}>Consultants</button>
         <button className={route==='/quiz'?'active':''} onClick={()=>navigate('/quiz')}>Stack Builder</button>
       </div>
       <button className="nav-cta" onClick={()=>navigate('/quiz')}>Build My Stack →</button>
@@ -575,7 +566,7 @@ function Footer({ navigate }) {
       <div className="footer-logo" onClick={()=>navigate('/')}>SaaSMatchup<div className="logo-dot" style={{width:6,height:6}}></div></div>
       <div className="footer-links">
         <button onClick={()=>navigate('/stacks/marketing-agency')}>Stacks</button>
-        <button onClick={()=>navigate('/consultants')}>Consultants</button>
+        <button onClick={()=>window.location.href='/find-a-consultant.html'}>Consultants</button>
         <button onClick={()=>navigate('/quiz')}>Stack Builder</button>
       </div>
       <div>© 2025 SaaSMatchup</div>
@@ -701,12 +692,12 @@ function HomePage({ navigate }) {
         <div className="container section">
           <div className="section-eyebrow">Consultant marketplace</div>
           <div className="section-title">Connect with vetted implementation experts</div>
-          <p className="section-sub">Every consultant is reviewed. Request an introduction and hear back within 24 hours.</p>
+          <p className="section-sub">Every consultant is reviewed for technical depth and client track record. Submit a project brief and hear back within 48 hours.</p>
           <div className="consult-grid">
             {CONSULTANTS.slice(0,3).map(c=><ConsultantCard key={c.id} c={c} />)}
           </div>
           <div style={{textAlign:'center',marginTop:28}}>
-            <button className="btn-text" onClick={()=>navigate('/consultants')}>Browse all {CONSULTANTS.length} consultants →</button>
+            <button className="btn-text" onClick={()=>window.location.href='/find-a-consultant.html'}>View the consultant network →</button>
           </div>
         </div>
       </div>
@@ -717,7 +708,7 @@ function HomePage({ navigate }) {
         <p>Answer 5 questions and get your full, customised SaaS architecture in 90 seconds.</p>
         <div className="cta-actions">
           <button className="btn-amber" onClick={()=>navigate('/quiz')}>✦ Build My Stack Free</button>
-          <button className="btn-ghost" onClick={()=>navigate('/consultants')}>Find a consultant →</button>
+          <button className="btn-ghost" onClick={()=>window.location.href='/find-a-consultant.html'}>Find a consultant →</button>
         </div>
       </div>
     </div>
@@ -833,7 +824,7 @@ function StackDetailPage({ slug, navigate }) {
         <div style={{background:'var(--amber-pale)',border:'1.5px solid var(--amber-light)',borderRadius:12,padding:'28px 32px',textAlign:'center'}}>
           <div style={{fontFamily:"'Lora',serif",fontSize:20,fontWeight:600,color:'var(--ink)',marginBottom:8}}>Need help implementing this stack?</div>
           <p style={{fontSize:14,color:'var(--ink-soft)',marginBottom:20}}>Connect with a vetted consultant who specialises in these exact tools.</p>
-          <button className="btn-primary" onClick={()=>navigate('/consultants')}>Find a consultant →</button>
+          <button className="btn-primary" onClick={()=>window.location.href='/find-a-consultant.html'}>Find a consultant →</button>
         </div>
       </div>
     </div>
@@ -869,7 +860,7 @@ function ConsultantsPage({ navigate }) {
             <h3>Are you a SaaS consultant?</h3>
             <p>Get listed free and receive inbound leads from buyers who need your exact expertise.</p>
           </div>
-          <button className="btn-primary" style={{flexShrink:0}} onClick={()=>setShowJoin(true)}>Get Listed Free →</button>
+          <button className="btn-primary" style={{flexShrink:0}} onClick={()=>window.location.href='/become-a-consultant.html'}>Get Listed Free →</button>
         </div>
         {/* FILTERS */}
         <div style={{marginBottom:8}}>
@@ -935,7 +926,7 @@ function QuizPage({ navigate }) {
             ? <button className="btn-primary" style={{justifyContent:'center'}} onClick={()=>setEmailSent(true)}>📧 Email Me This Stack</button>
             : <div className="success-msg">✓ Stack sent to {answers.email}! Check your inbox.</div>
           }
-          <button className="btn-outline" style={{justifyContent:'center'}} onClick={()=>navigate('/consultants')}>Find a consultant for this stack →</button>
+          <button className="btn-outline" style={{justifyContent:'center'}} onClick={()=>window.location.href='/find-a-consultant.html'}>Find a consultant for this stack →</button>
           <button className="btn-text" style={{justifyContent:'center'}} onClick={()=>{setResult(null);setStep(1);setAnswers({type:'',size:'',budget:'',pain:[],email:''});setEmailSent(false);}}>← Retake quiz</button>
         </div>
       </div>
