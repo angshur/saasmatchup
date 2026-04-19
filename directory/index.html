@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Tool Directory — MarTech, Data Engineering & AI/ML | SaaSMatchup</title>
+<meta name="description" content="Browse opinionated tool comparisons across MarTech, Data Engineering, and AI/ML categories. Not a feature list — architectural guidance on which tools work together and when.">
+<meta property="og:title" content="SaaS Tool Directory — SaaSMatchup">
+<meta property="og:description" content="Opinionated tool comparisons across MarTech, Data Engineering, and AI/ML. Which tools to use together, and why.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://saasmatchup.com/directory">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+:root{
+  --background:#FAF7F2;
+  --paper:#FFFDF9;
+  --accent:#D97706;
+  --accent-light:#FDE68A;
+  --accent-pale:#FFFBEB;
+  --text-primary:#1C1917;
+  --text-secondary:#44403C;
+  --text-muted:#78716C;
+  --text-faint:#A8A29E;
+  --border:rgba(28,25,23,0.12);
+  --border-amber:rgba(217,119,6,0.3);
+  --rust:#C2410C;
+  --blue:#1D4ED8;
+  --blue-pale:#EFF6FF;
+  --blue-border:rgba(29,78,216,0.2);
+  --purple:#6D28D9;
+  --purple-pale:#F5F3FF;
+  --purple-border:rgba(109,40,217,0.2);
+  --sage:#4D7C5F;
+  --sage-pale:#F0FDF4;
+  --sage-border:rgba(77,124,95,0.2);
+  --font-headline:'Lora',serif;
+  --font-ui:'Caveat',cursive;
+  --font-body:'DM Sans',sans-serif;
+  --max-w:1080px;
+  --radius:10px;
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--background);
+  color:var(--text-primary);
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── NAV ─────────────────────────────── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,247,242,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1.5px solid var(--border);
+  height:60px;display:flex;align-items:center;
+  padding:0 32px;gap:32px;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--font-ui);font-size:20px;font-weight:700;
+  color:var(--text-primary);text-decoration:none;
+}
+.nav-logo-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent);flex-shrink:0;
+}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:8px}
+.nav-links a{
+  font-size:14px;font-weight:500;color:var(--text-muted);
+  text-decoration:none;padding:6px 12px;border-radius:6px;
+  transition:all 0.15s;
+}
+.nav-links a:hover{color:var(--text-primary);background:rgba(217,119,6,0.08)}
+.nav-links a.active{color:var(--accent)}
+.nav-cta{
+  margin-left:auto;
+  font-family:var(--font-ui);font-size:16px;font-weight:600;
+  color:var(--paper);background:var(--accent);
+  padding:7px 18px;border-radius:8px;text-decoration:none;
+  box-shadow:3px 3px 0 rgba(28,25,23,0.2);
+  transition:all 0.15s;white-space:nowrap;
+}
+.nav-cta:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 rgba(28,25,23,0.2)}
+
+/* ── BREADCRUMB ──────────────────────── */
+.breadcrumb{
+  max-width:var(--max-w);margin:0 auto;
+  padding:14px 32px;
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--font-ui);font-size:15px;color:var(--text-faint);
+}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;transition:color 0.15s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{color:var(--accent);font-size:13px}
+
+/* ── PAGE HEADER ─────────────────────── */
+.page-header{
+  background:var(--paper);
+  border-bottom:1.5px solid var(--border);
+  padding:56px 32px 48px;
+}
+.page-header-inner{max-width:var(--max-w);margin:0 auto}
+.header-eyebrow{
+  font-family:var(--font-ui);font-size:16px;font-weight:600;
+  color:var(--accent);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.header-eyebrow::after{content:'';flex:1;height:1.5px;background:var(--accent-light);max-width:60px}
+.page-header h1{
+  font-family:var(--font-headline);
+  font-size:clamp(28px,4vw,42px);font-weight:600;
+  letter-spacing:-0.02em;line-height:1.15;
+  color:var(--text-primary);margin-bottom:14px;
+}
+.page-header .subhead{
+  font-size:17px;color:var(--text-muted);
+  line-height:1.75;max-width:620px;
+}
+
+/* ── MAIN ────────────────────────────── */
+.content{max-width:var(--max-w);margin:0 auto;padding:0 32px 96px}
+
+/* ── CATEGORY SECTION ────────────────── */
+.category-section{padding-top:56px}
+.category-section + .category-section{border-top:1.5px solid var(--border);margin-top:56px}
+
+.category-header{
+  display:flex;align-items:flex-start;gap:18px;margin-bottom:28px;
+}
+.category-icon{
+  width:48px;height:48px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.category-icon.martech{background:var(--accent-pale);border:1.5px solid var(--border-amber)}
+.category-icon.data{background:var(--blue-pale);border:1.5px solid var(--blue-border)}
+.category-icon.ai{background:var(--purple-pale);border:1.5px solid var(--purple-border)}
+
+.category-meta{flex:1}
+.category-name{
+  font-family:var(--font-headline);font-size:22px;font-weight:600;
+  color:var(--text-primary);margin-bottom:5px;line-height:1.2;
+}
+.category-desc{font-size:14px;color:var(--text-muted);line-height:1.65;max-width:560px}
+.category-count{
+  font-family:var(--font-ui);font-size:14px;
+  color:var(--text-faint);margin-top:4px;
+}
+
+/* ── SUBCATEGORY GRID ────────────────── */
+.subcat-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.subcat-card{
+  background:var(--paper);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  text-decoration:none;
+  transition:all 0.18s;
+  display:flex;flex-direction:column;gap:8px;
+  position:relative;
+}
+.subcat-card.live:hover{
+  border-color:var(--border-amber);
+  border-style:dashed;
+  box-shadow:3px 3px 0 var(--accent-light);
+  transform:translate(-1px,-1px);
+}
+.subcat-card.soon{
+  opacity:0.55;cursor:default;
+}
+
+.subcat-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.subcat-title{
+  font-family:var(--font-headline);font-size:16px;font-weight:600;
+  color:var(--text-primary);line-height:1.25;
+}
+.subcat-card.soon .subcat-title{color:var(--text-muted)}
+
+.live-badge{
+  font-family:var(--font-ui);font-size:12px;font-weight:600;
+  color:var(--sage);background:var(--sage-pale);
+  border:1px solid var(--sage-border);
+  padding:2px 8px;border-radius:100px;white-space:nowrap;flex-shrink:0;
+}
+.soon-badge{
+  font-family:var(--font-ui);font-size:12px;font-weight:600;
+  color:var(--text-faint);background:var(--background);
+  border:1px solid var(--border);
+  padding:2px 8px;border-radius:100px;white-space:nowrap;flex-shrink:0;
+}
+
+.subcat-desc{font-size:13px;color:var(--text-muted);line-height:1.6}
+.subcat-layer{
+  font-family:var(--font-ui);font-size:13px;
+  color:var(--text-faint);
+}
+.subcat-arrow{
+  font-size:15px;color:var(--accent);margin-top:auto;
+  transition:transform 0.15s;
+}
+.subcat-card.live:hover .subcat-arrow{transform:translateX(3px)}
+
+/* ── CTA STRIP ───────────────────────── */
+.cta-strip{
+  margin-top:64px;padding:40px 48px;
+  background:var(--paper);border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:space-between;gap:32px;
+}
+.cta-strip-text h2{
+  font-family:var(--font-headline);font-size:20px;font-weight:600;
+  color:var(--text-primary);margin-bottom:6px;
+}
+.cta-strip-text p{font-size:14px;color:var(--text-muted);line-height:1.65;max-width:480px}
+.btn-amber{
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  font-family:var(--font-ui);font-size:17px;font-weight:700;
+  color:var(--paper);background:var(--accent);
+  border:none;padding:11px 24px;border-radius:8px;
+  text-decoration:none;
+  box-shadow:4px 4px 0 rgba(28,25,23,0.18);
+  transition:all 0.15s;
+}
+.btn-amber:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(28,25,23,0.18)}
+
+/* ── FOOTER ──────────────────────────── */
+footer{
+  border-top:1.5px solid var(--border);
+  padding:32px;text-align:center;
+  font-size:13px;color:var(--text-faint);
+}
+footer a{color:var(--text-muted);text-decoration:none}
+footer a:hover{color:var(--accent)}
+
+/* ── RESPONSIVE ──────────────────────── */
+@media(max-width:900px){
+  .subcat-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-strip{flex-direction:column;align-items:flex-start;gap:20px}
+}
+@media(max-width:600px){
+  nav{padding:0 16px;gap:16px}
+  .nav-links{display:none}
+  .breadcrumb{padding:12px 16px}
+  .page-header{padding:40px 16px 32px}
+  .content{padding:0 16px 64px}
+  .subcat-grid{grid-template-columns:1fr}
+  .cta-strip{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    SaaSMatchup
+    <span class="nav-logo-dot"></span>
+  </a>
+  <div class="nav-links">
+    <a href="/directory/" class="active">Directory</a>
+    <a href="/#stacks">Stacks</a>
+    <a href="/get-help/">Get Help</a>
+  </div>
+  <a href="/#quiz" class="nav-cta">Take the Quiz →</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Home</a>
+  <span class="breadcrumb-sep">→</span>
+  Directory
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="header-eyebrow">SaaSMatchup Directory</div>
+    <h1>Tool Categories</h1>
+    <p class="subhead">Opinionated buyer's guides across MarTech, Data Engineering, and AI/ML — organized by where each tool fits in your stack, not just what it does.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="content">
+
+  <!-- MARTECH ──────────────────────────────────────── -->
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-icon martech">📊</div>
+      <div class="category-meta">
+        <div class="category-name">MarTech</div>
+        <div class="category-desc">Measurement, customer data, lifecycle, and analytics tools — organized by where they sit in the measurement and activation stack.</div>
+        <div class="category-count">2 live · 4 coming soon</div>
+      </div>
+    </div>
+    <div class="subcat-grid">
+
+      <a href="/directory/martech/attribution.html" class="subcat-card live">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Attribution &amp; Measurement</span>
+          <span class="live-badge">Live</span>
+        </div>
+        <p class="subcat-desc">MTA, MMM, and unified measurement — 12 tools with honest positioning on methodology fit.</p>
+        <div class="subcat-layer">🧱 Measurement Layer</div>
+        <span class="subcat-arrow">→</span>
+      </a>
+
+      <a href="/directory/martech/incrementality.html" class="subcat-card live">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Incrementality Testing</span>
+          <span class="live-badge">Live</span>
+        </div>
+        <p class="subcat-desc">Holdout tests, geo-based lift, and platform-native experiments — when each method actually works.</p>
+        <div class="subcat-layer">🧪 Measurement Layer</div>
+        <span class="subcat-arrow">→</span>
+      </a>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Media Mix Modeling</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Robyn, Meridian, Recast, and managed MMM services — open source vs managed and when to use each.</p>
+        <div class="subcat-layer">🧱 Measurement Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Data Clean Rooms</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Snowflake DCR, LiveRamp, InfoSum, Habu — privacy-safe collaboration and when it's actually worth the complexity.</p>
+        <div class="subcat-layer">🔐 Data &amp; Identity Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">CDP &amp; Identity Resolution</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Segment, mParticle, RudderStack, Treasure Data — the right CDP for your data maturity and team size.</p>
+        <div class="subcat-layer">🆔 Identity Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Analytics &amp; BI</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Looker, Tableau, Metabase, Mode — where measurement output gets visualized and where most teams over-buy.</p>
+        <div class="subcat-layer">📈 Reporting Layer</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DATA ENGINEERING ─────────────────────────────── -->
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-icon data">🏗️</div>
+      <div class="category-meta">
+        <div class="category-name">Data Engineering</div>
+        <div class="category-desc">Warehouse, ingestion, transformation, and orchestration — the plumbing that makes every other tool in your stack work.</div>
+        <div class="category-count">1 live · 4 coming soon</div>
+      </div>
+    </div>
+    <div class="subcat-grid">
+
+      <a href="/directory/data-engineering/warehouse.html" class="subcat-card live">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Data Warehouse</span>
+          <span class="live-badge">Live</span>
+        </div>
+        <p class="subcat-desc">Snowflake, BigQuery, Databricks, ClickHouse — cloud warehouses vs lakehouses vs OLAP, with honest cost modeling.</p>
+        <div class="subcat-layer">🗄️ Storage Layer</div>
+        <span class="subcat-arrow">→</span>
+      </a>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Ingestion &amp; ELT</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Fivetran, Airbyte, Stitch, Meltano — managed vs open source ingestion and when the price difference is justified.</p>
+        <div class="subcat-layer">🔄 Ingestion Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Transformation</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">dbt, SQLMesh, Coalesce — the transformation layer that most data stacks get wrong until it's painful.</p>
+        <div class="subcat-layer">⚙️ Transformation Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Reverse ETL</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Census, Hightouch, Polytomic — syncing warehouse data back to operational tools and why this unlocks the rest of your stack.</p>
+        <div class="subcat-layer">🔁 Activation Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Orchestration</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Airflow, Prefect, Dagster, Mage — pipeline orchestration and the hidden operational cost most teams underestimate.</p>
+        <div class="subcat-layer">🎛️ Orchestration Layer</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AI / ML ──────────────────────────────────────── -->
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-icon ai">🤖</div>
+      <div class="category-meta">
+        <div class="category-name">AI / ML</div>
+        <div class="category-desc">Agents, model APIs, vector databases, and observability — the emerging infrastructure layer most marketing and data teams are now building on top of.</div>
+        <div class="category-count">0 live · 5 coming soon</div>
+      </div>
+    </div>
+    <div class="subcat-grid">
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Agents &amp; Orchestration</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">LangChain, LlamaIndex, CrewAI, AutoGen — agent frameworks and when building custom beats buying pre-packaged.</p>
+        <div class="subcat-layer">🤖 Agent Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Model APIs</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">OpenAI, Anthropic, Google Gemini, Mistral — model selection by use case and the real cost-performance tradeoffs.</p>
+        <div class="subcat-layer">🧠 Model Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">Vector Databases</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Pinecone, Weaviate, Qdrant, pgvector — when you need a dedicated vector store vs when your existing database is enough.</p>
+        <div class="subcat-layer">📦 Storage Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">LLM Observability</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Langfuse, Helicone, Arize, Braintrust — monitoring and evals for production AI, and why this is no longer optional.</p>
+        <div class="subcat-layer">🔍 Observability Layer</div>
+      </div>
+
+      <div class="subcat-card soon">
+        <div class="subcat-card-top">
+          <span class="subcat-title">AI for Marketing</span>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+        <p class="subcat-desc">Jasper, Copy.ai, Persado, Writer — AI-native marketing tools vs wrappers, and which ones have defensible differentiation.</p>
+        <div class="subcat-layer">📣 Execution Layer</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <div class="cta-strip-text">
+      <h2>Not sure which category to start with?</h2>
+      <p>Answer 5 questions about your company type, team size, and budget — get a complete stack recommendation with the tools from each layer that fit your situation.</p>
+    </div>
+    <a href="https://saasmatchup.com/#quiz" class="btn-amber">Take the Stack Quiz →</a>
+  </div>
+
+</div><!-- /content -->
+
+<footer>
+  <span>© 2026 SaaSMatchup · <a href="/">Home</a> · <a href="/directory/">Directory</a> · <a href="/get-help/">Get Help</a></span>
+</footer>
+
+</body>
+</html>
