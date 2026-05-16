@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Root -->
+  <url><loc>https://saasmatchup.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://saasmatchup.com/find-a-consultant</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/become-a-consultant</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Directory root -->
+  <url><loc>https://saasmatchup.com/directory/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- MarTech -->
+  <url><loc>https://saasmatchup.com/directory/martech/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/attribution</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/incrementality</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/b2b-attribution</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/lifecycle-automation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/customer-engagement-platforms</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/identity-resolution</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/analytics-bi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/retail-media</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/affiliate-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/intent-data-abm</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/programmatic-dsps</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/paid-media-management</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/marketing-ops</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/marketing-ai-agentic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/data-onboarding</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/creative-analytics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/seo-organic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/audio-podcast</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/ctv-ott-measurement</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://saasmatchup.com/directory/martech/dooh-measurement</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Data Engineering -->
+  <url><loc>https://saasmatchup.com/directory/data-engineering/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasmatchup.com/directory/data-engineering/warehouse</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- AI/ML -->
+  <url><loc>https://saasmatchup.com/directory/ai-ml/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- HRTech -->
+  <url><loc>https://saasmatchup.com/directory/hrtech/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://saasmatchup.com/directory/hrtech/ats-recruiting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
