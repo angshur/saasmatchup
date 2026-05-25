@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Clean Room Tools 2026 — Snowflake, LiveRamp, Netflix, Amazon Marketing Cloud | SaaSMatchup</title>
+<meta name="description" content="Honest comparison of 6 data clean room platforms — infrastructure (Snowflake, AWS), purpose-built (LiveRamp, InfoSum), and walled garden (Netflix, AMC, Google). When clean rooms solve the problem and when they don't.">
+<meta property="og:title" content="Data Clean Room Tools 2026 — SaaSMatchup">
+<meta property="og:description" content="Snowflake DCR vs LiveRamp vs InfoSum vs Netflix Clean Room vs Amazon Marketing Cloud — which architecture fits your data stack. Organized by deployment model with honest guidance on match rate prerequisites.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://saasmatchup.com/directory/martech/data-clean-rooms">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Data Clean Room Tools",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Snowflake Data Clean Rooms","url":"https://www.snowflake.com/en/data-cloud/clean-rooms/"},
+    {"@type":"ListItem","position":2,"name":"AWS Clean Rooms","url":"https://aws.amazon.com/clean-rooms/"},
+    {"@type":"ListItem","position":3,"name":"LiveRamp Clean Room","url":"https://liveramp.com/clean-room/"},
+    {"@type":"ListItem","position":4,"name":"InfoSum","url":"https://infosum.com"},
+    {"@type":"ListItem","position":5,"name":"Netflix Ads Clean Room","url":"https://advertising.netflix.com/"},
+    {"@type":"ListItem","position":6,"name":"Amazon Marketing Cloud","url":"https://advertising.amazon.com/solutions/products/amazon-marketing-cloud"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/directory/martech/category.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">SaaSMatchup<span class="nav-logo-dot"></span></a>
+  <div class="nav-links">
+    <a href="/directory/" class="active">Directory</a>
+    <a href="/#stacks">Stacks</a>
+    <a href="/find-a-consultant.html">Find a Consultant</a>
+  </div>
+  <a href="/#quiz" class="nav-cta">Take the Quiz →</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span class="breadcrumb-sep">→</span>
+  <a href="/directory/">Directory</a><span class="breadcrumb-sep">→</span>
+  <a href="/directory/martech/">MarTech</a><span class="breadcrumb-sep">→</span>
+  Data Clean Rooms
+</div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="header-eyebrow">MarTech → Identity &amp; Data → Data Clean Rooms</div>
+    <h1>Data Clean Room Tools</h1>
+    <p class="subhead">6 platforms for privacy-safe data collaboration — infrastructure, purpose-built, and publisher-native. When clean rooms unlock deterministic attribution and when they're complexity you don't need.</p>
+    <span class="layer-badge">Identity Layer</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- EDITORIAL -->
+  <div class="editorial">
+    <div class="editorial-eyebrow">The category</div>
+    <p>A data clean room is a controlled environment where two parties can analyze combined datasets without either side ever seeing the other's raw data. In practice: a publisher has impression data, an advertiser has customer data, and a clean room lets them run overlap queries — who saw the ad, who bought — without either party exchanging raw records. The clean room enforces what queries can run and what the output looks like: aggregates only, never row-level. What changed in 2024–25 is that publisher-native clean rooms have matured enough to deliver deterministic attribution — not probabilistic estimates, but actual counts of which customers were exposed before converting. Netflix launched its Snowflake-based clean room in 2025; Amazon Marketing Cloud has been running since 2021. That shift moved streaming from a brand-awareness buy to a performance channel for advertisers who can prove the number.</p>
+    <p>Clean rooms come in three architectural flavors. Platform-native clean rooms (Netflix, Amazon Marketing Cloud, Google Ads Data Hub, Meta Advanced Analytics) live inside the publisher's ecosystem and let you analyze your data against their signals — deterministic attribution within that publisher's walls. Infrastructure-layer clean rooms (Snowflake Data Clean Rooms, AWS Clean Rooms) give you full control inside your existing data warehouse and let you define the collaboration rules yourself. Purpose-built clean room vendors (LiveRamp Clean Room, InfoSum) sit on top of those infrastructure layers and add identity resolution, partner connectivity, and pre-built query templates. Most enterprise teams end up with a combination: one platform-native clean room per major publisher for attribution, plus one infrastructure-layer clean room for cross-partner or first-party work.</p>
+    <p>Before you build a clean room, answer three questions. First: does your use case involve data from a party you can't share raw records with? If the data already lives in your warehouse, you don't need a clean room — you need a data model. Second: do you have the match rate? Clean rooms only work if both parties share overlapping identifiers — hashed email is the standard. If your CRM match rate against a given publisher is below 20%, the attribution output will be statistically thin. Fix the identity layer first. Third: what's your use case? Attribution and overlap analysis genuinely require a clean room. Suppression and lookalike targeting usually don't — a hashed email match table is sufficient for those. <a href="https://clearpath-analytics.vercel.app/blog/do-you-actually-need-a-clean-room" target="_blank" rel="noopener">Full decision framework here.</a></p>
+  </div>
+
+  <!-- TENSIONS -->
+  <div class="tensions">
+    <div class="tensions-heading">The tensions in this category</div>
+    <div class="tension-item">
+      <div class="tension-label">Infrastructure control vs. speed to value</div>
+      <p>Snowflake and AWS clean rooms give you full flexibility but require data engineering to set up. Purpose-built vendors (InfoSum, Habu) get you running faster but at higher per-query cost and less control over the underlying infrastructure and query governance.</p>
+    </div>
+    <div class="tension-item">
+      <div class="tension-label">Privacy-safe vs. statistically useful</div>
+      <p>Differential privacy and aggregate-only outputs protect raw data but limit what you can learn. A query that requires 50K+ matching records to produce a result is safe — it's also often inconclusive for smaller advertisers or niche publishers. Privacy protections have a direct cost in analytical precision.</p>
+    </div>
+    <div class="tension-item">
+      <div class="tension-label">Clean rooms vs. identity resolution</div>
+      <p>A clean room doesn't solve your identity problem — it assumes it's already solved. If your CRM match rate is 30%, your clean room outputs represent 30% of the picture. Fix the identity layer first. A clean room built on a broken identity graph produces confident-looking answers to the wrong question.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-section">
+    <div class="filter-label">Filter by deployment model</div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="All">All</button>
+      <button class="filter-btn" data-filter="Infrastructure">Infrastructure</button>
+      <button class="filter-btn" data-filter="Purpose-Built">Purpose-Built</button>
+      <button class="filter-btn" data-filter="Walled Garden">Walled Garden</button>
+      <button class="filter-btn" data-filter="Enterprise">Enterprise</button>
+    </div>
+    <div class="results-count" id="resultsCount"></div>
+  </div>
+
+  <!-- VENDOR GRID -->
+  <div class="vendor-grid" id="vendorGrid"></div>
+
+  <!-- RELATED CATEGORIES -->
+  <div class="related">
+    <h2>Related categories</h2>
+    <div class="related-grid">
+      <a href="/directory/martech/identity-resolution.html" class="related-card">
+        <span class="related-arrow">→</span>
+        <div class="related-text">
+          <h3>Identity Resolution</h3>
+          <p>Prerequisite — match rate determines whether clean room outputs are meaningful</p>
+        </div>
+      </a>
+      <a href="/directory/martech/attribution.html" class="related-card">
+        <span class="related-arrow">→</span>
+        <div class="related-text">
+          <h3>Attribution &amp; Measurement</h3>
+          <p>Clean rooms are one input to cross-channel attribution across walled gardens</p>
+        </div>
+      </a>
+      <a href="/directory/martech/data-onboarding.html" class="related-card">
+        <span class="related-arrow">→</span>
+        <div class="related-text">
+          <h3>Data Onboarding &amp; Enrichment</h3>
+          <p>How first-party data gets resolved before clean room use — LiveRamp, Acxiom</p>
+        </div>
+      </a>
+      <a href="/directory/martech/programmatic-dsps.html" class="related-card">
+        <span class="related-arrow">→</span>
+        <div class="related-text">
+          <h3>Programmatic DSPs</h3>
+          <p>The Trade Desk + LiveRamp is the dominant clean room activation pattern</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA BLOCK -->
+  <div class="cta-block">
+    <div class="cta-primary-side">
+      <h2>Get a personalized stack recommendation</h2>
+      <p>Answer 5 questions about your team and data infrastructure — get a specific clean room architecture recommendation, not a generic list.</p>
+      <a href="/#quiz" class="btn-amber">Take the Quiz →</a>
+    </div>
+    <div class="cta-secondary-side">
+      <a href="https://clearpath-analytics.vercel.app/blog/do-you-actually-need-a-clean-room" class="btn-outline" target="_blank" rel="noopener">Not sure if you need a clean room? →</a>
+      <p class="cta-note">Four questions that tell you whether a clean room is the right tool, a simpler match table is sufficient, or you're solving a problem you don't have.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="/">SaaSMatchup</a> · <a href="/directory/">Directory</a> · <a href="/find-a-consultant.html">Find a Consultant</a></p>
+  <p style="margin-top:8px">Architectural guidance on which tools work together and when.</p>
+</footer>
+
+<script>
+const vendors = [
+
+  // ── INFRASTRUCTURE LAYER ───────────────────────────────────────
+
+  {
+    id: "snowflake-dcr",
+    name: "Snowflake Data Clean Rooms",
+    description: "Native clean room environment built into Snowflake — provider/consumer model with query governance and differential privacy.",
+    bestFor: "Enterprises already on Snowflake that want full control over collaboration rules and data governance",
+    url: "https://www.snowflake.com/en/data-cloud/clean-rooms/",
+    pricing: "Included with Snowflake contract — compute costs apply per query",
+    worksWith: ["LiveRamp", "InfoSum", "Habu", "dbt", "Fivetran"],
+    tags: ["Infrastructure", "Enterprise", "warehouse-native"],
+    whyItWins: "If you're already on Snowflake, this is the lowest-friction path to a clean room. Provider defines approved query templates; consumer runs them in their own account. No raw data ever leaves either account. Cross-cloud refresh improved dramatically in 2025 — 30-minute refresh, down from 24 hours.",
+    notFor: "Teams not on Snowflake, or anyone who needs a managed partner network — you build the partner connections yourself",
+    alternatives: ["AWS Clean Rooms", "Habu", "InfoSum"],
+    highlight: true,
+  },
+
+  {
+    id: "aws-clean-rooms",
+    name: "AWS Clean Rooms",
+    description: "AWS-native clean room service — collaborative analysis across multiple AWS accounts without sharing raw data.",
+    bestFor: "Teams with data in S3/Redshift and existing AWS infrastructure who want native IAM-level access controls",
+    url: "https://aws.amazon.com/clean-rooms/",
+    pricing: "Pay-per-query — ~$0.14 per query + data processing costs",
+    worksWith: ["Amazon Ads", "Amazon Marketing Cloud", "Redshift", "S3"],
+    tags: ["Infrastructure", "Enterprise", "AWS"],
+    whyItWins: "Tightest integration with the Amazon Ads ecosystem. If retail media or Amazon DSP is a major channel, AWS Clean Rooms + AMC is the natural stack. Strong differential privacy controls built in at the infrastructure level.",
+    notFor: "Teams not in AWS, or those who need easy cross-publisher partner connectivity without significant engineering build",
+    alternatives: ["Snowflake DCR", "Amazon Marketing Cloud", "Habu"],
+    highlight: false,
+  },
+
+  // ── PURPOSE-BUILT VENDORS ──────────────────────────────────────
+
+  {
+    id: "liveramp-clean-room",
+    name: "LiveRamp Clean Room",
+    description: "Clean room built on LiveRamp's identity graph — highest match rates and broadest partner network of any purpose-built vendor.",
+    bestFor: "Brands and publishers that want clean room + identity resolution in one platform with minimal engineering overhead",
+    url: "https://liveramp.com/clean-room/",
+    pricing: "Enterprise — contact sales (~$100K+/yr for full platform)",
+    worksWith: ["The Trade Desk", "Snowflake", "Google DV360", "Amazon DSP", "Salesforce"],
+    tags: ["Purpose-Built", "Enterprise"],
+    whyItWins: "Best match rates in the industry because the clean room is built on top of LiveRamp's identity graph. The partner network is the largest — over 500 data owners. LiveRamp acquired Habu in 2024 and absorbed its multi-cloud management UI — so if you were evaluating Habu, this is now the same product. If you're already using LiveRamp for data onboarding, the clean room is a natural extension with no new identity infrastructure required.",
+    notFor: "Teams not willing to pay LiveRamp's price tier, or those who want infrastructure control and transparent compute costs",
+    alternatives: ["InfoSum", "Snowflake DCR", "Amazon Marketing Cloud"],
+    highlight: true,
+  },
+
+  {
+    id: "infosum",
+    name: "InfoSum",
+    description: "Purpose-built clean room with true federated architecture — no data ever leaves the source environment.",
+    bestFor: "Publishers and media companies enabling advertiser data partnerships without centralizing data in a shared cloud environment",
+    url: "https://infosum.com",
+    pricing: "Enterprise — contact sales",
+    worksWith: ["LiveRamp", "The Trade Desk", "major DSPs", "UID2"],
+    tags: ["Purpose-Built", "Enterprise"],
+    whyItWins: "True federated architecture — unlike Snowflake-based clean rooms where data is replicated into a shared environment, InfoSum keeps data at the source and federates the computation. Preferred by privacy-sensitive publishers in financial and health verticals who can't replicate data to a third-party cloud.",
+    notFor: "Teams that need warehouse-native integration or want to own the infrastructure layer directly",
+    alternatives: ["LiveRamp Clean Room", "Snowflake DCR", "Habu"],
+    highlight: false,
+  },
+
+  {
+    id: "netflix-clean-room",
+    name: "Netflix Ads Clean Room",
+    description: "Snowflake-based clean room for Netflix ad attribution — match your CRM against Netflix impression data to get deterministic cost-per-acquisition, not probabilistic estimates.",
+    bestFor: "Performance advertisers spending on Netflix who want to prove streaming ROI with actual conversion data rather than brand lift proxies",
+    url: "https://advertising.netflix.com/",
+    pricing: "Available to Netflix Ad Suite customers — compute costs via Snowflake",
+    worksWith: ["Snowflake", "Netflix Ad Suite"],
+    tags: ["Walled Garden"],
+    whyItWins: "The first streaming platform to deliver deterministic attribution at scale. Launched 2025 alongside Netflix's in-house ad tech build-out. Both parties need Snowflake — Netflix brings impression data keyed to authenticated user identifiers, you bring your conversion file. The output is an actual overlap count, not a model-derived estimate. Early results from agencies like Tinuiti showed CPAs competitive with performance channels, which moved Netflix from brand budgets to performance budgets for those advertisers.",
+    notFor: "Advertisers not running Netflix Ads, or teams not on Snowflake — the Snowflake requirement is non-negotiable for the clean room to work",
+    alternatives: ["Amazon Marketing Cloud", "Google Ads Data Hub"],
+    highlight: false,
+  },
+
+  // ── WALLED GARDEN ─────────────────────────────────────────────
+
+  {
+    id: "amazon-marketing-cloud",
+    name: "Amazon Marketing Cloud (AMC)",
+    description: "Amazon's walled-garden clean room — query your Amazon Ads event data against your own first-party data inside Amazon's environment.",
+    bestFor: "Brands spending heavily on Amazon Ads that want path-to-purchase analysis and audience segmentation inside the Amazon ecosystem",
+    url: "https://advertising.amazon.com/solutions/products/amazon-marketing-cloud",
+    pricing: "Free for Amazon Ads customers — compute costs apply",
+    worksWith: ["Amazon DSP", "Amazon Ads", "AWS S3", "AWS Clean Rooms"],
+    tags: ["Walled Garden", "Infrastructure"],
+    whyItWins: "The only tool that gives you signal-level access to Amazon Ads data. Path-to-purchase across Sponsored Products + DSP is uniquely valuable for retail brands. SQL-based interface is accessible to analysts without dedicated clean room expertise.",
+    notFor: "Teams not spending on Amazon Ads — there's nothing to query if you're not in the Amazon ecosystem",
+    alternatives: ["AWS Clean Rooms", "Snowflake DCR", "Netflix Ads Clean Room"],
+    highlight: false,
+  },
+
+];
+
+function filterVendors(tag) {
+  if (tag === "All") return vendors;
+  if (tag === "Enterprise") return vendors.filter(v => v.tags.includes("Enterprise"));
+  return vendors.filter(v => v.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+}
+
+function renderVendors(filtered) {
+  const grid  = document.getElementById("vendorGrid");
+  const count = document.getElementById("resultsCount");
+  count.textContent = `${filtered.length} tool${filtered.length !== 1 ? "s" : ""}`;
+  grid.innerHTML = "";
+
+  filtered.forEach((v, i) => {
+    const card = document.createElement("div");
+    card.className = "vendor-card" + (v.highlight ? " featured" : "");
+    card.style.animationDelay = `${i * 0.04}s`;
+    card.innerHTML = `
+      <div class="vendor-card-header">
+        <span class="vendor-name">${v.name}</span>
+        ${v.highlight ? '<span class="featured-badge">Top pick</span>' : ""}
+      </div>
+      <p class="vendor-desc">${v.description}</p>
+      <div class="vendor-tags">${v.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+      <div class="vendor-meta">
+        <div class="meta-row">
+          <span class="meta-icon">🎯</span>
+          <span class="meta-label">Best for</span>
+          <span class="meta-value">${v.bestFor}</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-icon">💰</span>
+          <span class="meta-label">Pricing</span>
+          <span class="meta-value price">${v.pricing}</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-icon">🔗</span>
+          <span class="meta-label">Works with</span>
+          <div class="works-with">${v.worksWith.map(w => `<span class="works-chip">${w}</span>`).join("")}</div>
+        </div>
+      </div>
+      <div class="why-it-wins">${v.whyItWins}</div>
+      <div class="not-for">${v.notFor}</div>
+      <div class="alternatives">
+        <strong>Also consider</strong>
+        ${v.alternatives.map(a => `<span class="alt-chip">${a}</span>`).join("")}
+      </div>
+      <a href="${v.url}" class="vendor-link" target="_blank" rel="noopener">Visit ${v.name} ↗</a>`;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("filterBar").addEventListener("click", e => {
+  const btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  renderVendors(filterVendors(btn.dataset.filter));
+});
+
+renderVendors(vendors);
+</script>
+</body>
+</html>
